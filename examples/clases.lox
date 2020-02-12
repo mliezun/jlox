@@ -1,0 +1,86 @@
+class DevonshireCream {
+  serveOn() {
+    return "Scones";
+  }
+}
+
+print(DevonshireCream);
+
+
+class Bagel {}
+var bagel = Bagel();
+print(bagel);
+
+
+class Bacon {
+  eat() {
+    print("Crunch crunch crunch!");
+  }
+}
+
+Bacon().eat(); // Prints "Crunch crunch crunch!".
+
+
+class Cake {
+  taste() {
+    var adjective = "delicious";
+    print("The " + this.flavor + " cake is " + adjective + "!");
+  }
+}
+
+var cake = Cake();
+cake.flavor = "German chocolate";
+cake.taste(); // Prints "The German chocolate cake is delicious!".
+
+
+class Chair {
+    init(legs) {
+        this.legs = legs;
+    }
+
+    show() {
+        print("Chair with " + this.legs + " legs");
+    }
+}
+
+var chair = Chair(1);
+chair.show();
+
+class Math {
+    class factorial(n) {
+        if (n <= 1) {
+            return 1;
+        }
+        return n * this.factorial(n-1);
+    }
+
+    class square(x) {
+        return x*x;
+    }
+
+    factorial(n) {
+        return Math.factorial(n);
+    }
+}
+
+var start = clock();
+print("Math.factorial: " + Math.factorial(100));
+print("Tiempo factorial: " + (clock()-start));
+
+print(Math().factorial(10));
+
+
+class Doughnut {
+  cook() {
+    print("Fry until golden brown.");
+  }
+}
+
+class BostonCream < Doughnut {
+    cook() {
+        super.cook();
+        print("Pipe full of custard and coat with chocolate.");
+    }
+}
+
+BostonCream().cook();

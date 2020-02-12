@@ -1,0 +1,29 @@
+fun iterate(collectionGen, iteratorFn) {
+    var el = iteratorFn(collectionGen);
+    while (el != nil) {
+        el = iteratorFn(collectionGen);
+    }
+}
+
+fun makeCounter() {
+    var i = 0;
+    fun counter() {
+        i = i+1;
+        return i;
+    }
+    return counter;
+}
+
+fun count(n) {
+    fun iteratorFn(collection) {
+        var val = collection();
+        print(val);
+        if (val >= n) {
+            return nil;
+        }
+        return val;
+    }
+    return iteratorFn;
+}
+
+iterate(makeCounter(), count(10));
