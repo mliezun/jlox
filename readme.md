@@ -17,5 +17,5 @@ $ java -jar target/lox-1.0.jar
 
 ### Examples
 
-Examples of lox programs can be found inside the [examples](../examples/) folder.
+Examples of lox programs can be found inside the [examples](https://github.com/mliezun/jlox/tree/master/examples) folder.
 
